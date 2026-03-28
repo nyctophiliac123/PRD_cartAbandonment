@@ -97,6 +97,32 @@
   .cover-stat-label { font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 4px; }
   .cover-stat-value { font-family: 'Instrument Serif', serif; font-size: 18px; color: rgba(255,255,255,.9); }
 
+  /* ─── QUICK-SCAN SUMMARY ─── */
+  .qss {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .qss-header {
+    display: flex; align-items: center; gap: 9px;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .qss-bolt { font-size: 16px; color: var(--amber); line-height: 1; }
+  .qss-title { font-size: 13px; font-weight: 500; color: var(--txt); }
+  .qss-table { width: 100%; border-collapse: collapse; }
+  .qss-table thead tr { background: var(--bg); border-bottom: 1px solid var(--border); }
+  .qss-table th { padding: 10px 24px; font-size: 11px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: var(--txt-3); text-align: left; }
+  .qss-table th:first-child { width: 160px; }
+  .qss-table td { padding: 12px 24px; font-size: 13px; color: var(--txt); border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .qss-table tr:last-child td { border-bottom: none; }
+  .qss-table td:first-child { color: var(--txt-2); font-weight: 500; white-space: nowrap; }
+  .qss-table tbody tr:hover { background: var(--bg); transition: background .12s; }
+  .qss-icon { font-size: 14px; margin-right: 4px; }
+
   /* ─── TOC ─── */
   .toc {
     background: var(--surface);
@@ -256,6 +282,143 @@
   .pname { font-family: 'Instrument Serif', serif; font-size: 20px; margin-bottom: 3px; }
   .psub  { font-size: 12px; color: var(--txt-2); margin-bottom: 12px; }
 
+  /* ─── PERSONA BLOCKS (new) ─── */
+  .persona-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--indigo);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+  .persona-block-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .persona-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .persona-block-meta { flex: 1; min-width: 180px; }
+  .persona-block-name { font-weight: 500; font-size: 15px; color: var(--txt); line-height: 1.3; }
+  .persona-block-sub  { font-size: 12px; color: var(--txt-2); margin-top: 2px; }
+
+  /* Journey steps */
+  .persona-journey { margin: 0 0 16px; }
+  .pj-step { display: flex; align-items: flex-start; gap: 14px; }
+  .pj-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .pj-content { flex: 1; padding-bottom: 4px; }
+  .pj-label { font-size: 10px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: var(--txt-3); margin-bottom: 2px; }
+  .pj-text  { font-size: 13px; color: var(--txt); line-height: 1.6; }
+  .pj-line  { width: 1px; height: 14px; background: var(--border); margin: 2px 0 2px 4px; }
+
+  /* Insight strip */
+  .persona-insight {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    border-left: 3px solid;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    margin: 14px 0 10px;
+    font-size: 13px;
+  }
+  .pi-label { font-size: 10px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; flex-shrink: 0; }
+  .pi-text  { color: var(--txt); }
+
+  /* Verdict bar */
+  .persona-verdict {
+    display: flex; align-items: center; gap: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+  .pv-tag { font-size: 10px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; }
+  .pv-text { color: var(--txt); }
+
+  /* Synthesis block */
+  .synthesis-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .synth-headline {
+    padding: 18px 24px;
+    font-size: 15px;
+    color: var(--txt);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  .synth-body {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+  }
+  .synth-col { padding: 18px 24px; }
+  .synth-col-title { font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--txt-3); margin-bottom: 12px; }
+  .synth-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; margin-bottom: 8px; line-height: 1.5; }
+  .synth-item::before { content: ''; display: block; width: 5px; height: 5px; border-radius: 50%; background: var(--txt-3); margin-top: 6px; flex-shrink: 0; }
+  .synth-divider { background: var(--border); width: 1px; }
+  .synth-core {
+    padding: 14px 24px;
+    background: var(--red-lt);
+    border-top: 1px solid var(--red-mid);
+    font-size: 13px;
+    color: var(--txt);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .synth-core-label { font-size: 10px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: var(--red); flex-shrink: 0; }
+
+  /* Design Principle */
+  .design-principle {
+    background: var(--surface);
+    border: 1px solid var(--teal-mid);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 14px;
+  }
+  .dp-header {
+    display: flex; align-items: center; gap: 9px;
+    padding: 13px 22px;
+    background: var(--teal-lt);
+    border-bottom: 1px solid var(--teal-mid);
+  }
+  .dp-icon { font-size: 14px; }
+  .dp-title { font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--teal); }
+  .dp-tagline { padding: 16px 22px 12px; font-size: 14px; color: var(--txt); line-height: 1.5; border-bottom: 1px solid var(--border); }
+  .dp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .dp-item { padding: 14px 22px; border-right: 1px solid var(--border); }
+  .dp-item:last-child { border-right: none; }
+  .dp-item-label { font-weight: 500; font-size: 13px; color: var(--txt); margin-bottom: 2px; }
+  .dp-item-when { font-size: 12px; color: var(--teal); }
+  .dp-shift {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 22px;
+    flex-wrap: wrap;
+  }
+  .dp-shift-from, .dp-shift-to { display: flex; flex-direction: column; gap: 2px; }
+  .dp-shift-label { font-size: 10px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: var(--txt-3); }
+  .dp-shift-text  { font-size: 13px; color: var(--txt); }
+  .dp-shift-from .dp-shift-text { color: var(--txt-2); }
+  .dp-shift-to   .dp-shift-text { color: var(--teal); font-weight: 500; }
+  .dp-shift-arrow { font-size: 18px; color: var(--teal); flex-shrink: 0; }
+
+
   /* ─── IMPACT CALC ─── */
   .calc-step { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
   .calc-step:last-child { border-bottom: none; }
@@ -372,7 +535,9 @@
     .cover { padding: 32px 24px; }
     .cover h1 { font-size: 28px; }
     .cover-stats { grid-template-columns: 1fr 1fr; }
-    .grid-2, .grid-3, .grid-4, .ba, .inout, .toc-grid { grid-template-columns: 1fr; }
+    .grid-2, .grid-3, .grid-4, .ba, .inout, .toc-grid, .synth-body, .dp-grid { grid-template-columns: 1fr; }
+    .synth-divider { display: none; }
+    .persona-block-header { flex-wrap: wrap; }
     .feat-head, .feat-row { grid-template-columns: 1fr; }
     .phase-meta { grid-template-columns: 1fr; }
   }
@@ -405,25 +570,45 @@
   </div>
 </div>
 
+<!-- ══════════════ QUICK-SCAN SUMMARY ══════════════ -->
+<div class="qss">
+  <div class="qss-header">
+    <span class="qss-bolt">&#9889;</span>
+    <span class="qss-title">Quick-scan summary</span>
+  </div>
+  <table class="qss-table">
+    <thead>
+      <tr><th>Section</th><th>Key takeaway</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="qss-icon">&#128308;</span> Problem</td><td>65% cart abandonment &#8212; biggest drop at payment step</td></tr>
+      <tr><td><span class="qss-icon">&#127919;</span> Goal</td><td>CCR: 35% &#8594; 50% within 90 days of Phase 2 launch</td></tr>
+      <tr><td><span class="qss-icon">&#128176;</span> Impact</td><td>&#8377;78 crore/month incremental GMV if 10% of abandoned carts recovered</td></tr>
+      <tr><td><span class="qss-icon">&#128197;</span> Timeline</td><td>Phase 1: 4 wks &middot; Phase 2: 6 wks &middot; Phase 3: 6 wks</td></tr>
+      <tr><td><span class="qss-icon">&#128683;</span> Non-goals</td><td>No new payment methods, no discounting, no upstream redesign</td></tr>
+    </tbody>
+  </table>
+</div>
+
 <!-- ══════════════ TOC ══════════════ -->
 <div class="toc">
   <div class="toc-eyebrow">Contents</div>
   <div class="toc-grid">
     <a href="#problem"      class="toc-item"><span class="toc-n">01</span>Problem Statement</a>
-    <a href="#metrics"      class="toc-item"><span class="toc-n">06</span>Metrics</a>
     <a href="#approach"     class="toc-item"><span class="toc-n">02</span>High-Level Approach</a>
-    <a href="#impact"       class="toc-item"><span class="toc-n">07</span>Impact Sizing</a>
-    <a href="#narrative"    class="toc-item"><span class="toc-n">03</span>Narrative & Personas</a>
-    <a href="#nongoals"     class="toc-item"><span class="toc-n">08</span>Non-Goals</a>
+    <a href="#narrative"    class="toc-item"><span class="toc-n">03</span>Narrative &amp; Personas</a>
     <a href="#goals"        class="toc-item"><span class="toc-n">04</span>Goals</a>
-    <a href="#solution"     class="toc-item"><span class="toc-n">09</span>Solution Alignment</a>
     <a href="#hypotheses"   class="toc-item"><span class="toc-n">05</span>Competing Hypotheses</a>
+    <a href="#metrics"      class="toc-item"><span class="toc-n">06</span>Metrics</a>
+    <a href="#impact"       class="toc-item"><span class="toc-n">07</span>Impact Sizing</a>
+    <a href="#nongoals"     class="toc-item"><span class="toc-n">08</span>Non-Goals</a>
+    <a href="#solution"     class="toc-item"><span class="toc-n">09</span>Solution Alignment</a>
     <a href="#features"     class="toc-item"><span class="toc-n">10</span>Key Features</a>
     <a href="#future"       class="toc-item"><span class="toc-n">11</span>Future Considerations</a>
     <a href="#flows"        class="toc-item"><span class="toc-n">12</span>Key Flows</a>
-    <a href="#logic"        class="toc-item"><span class="toc-n">13</span>Key Logic & Rules</a>
+    <a href="#logic"        class="toc-item"><span class="toc-n">13</span>Key Logic &amp; Rules</a>
     <a href="#launch"       class="toc-item"><span class="toc-n">14</span>Launch Plan</a>
-    <a href="#stakeholders" class="toc-item"><span class="toc-n">15</span>Stakeholders & Milestones</a>
+    <a href="#stakeholders" class="toc-item"><span class="toc-n">15</span>Stakeholders &amp; Milestones</a>
     <a href="#"             class="toc-item" style="visibility:hidden"></a>
   </div>
 </div>
@@ -490,36 +675,137 @@
 <!-- ══════════════ 03 NARRATIVE ══════════════ -->
 <section id="narrative">
   <div class="sh">
-    <div class="sh-icon" style="background:var(--slate-lt);">👤</div>
-    <div class="sh-meta"><div class="sh-num">03</div><h2>Narrative & Personas</h2></div>
+    <div class="sh-icon" style="background:var(--slate-lt);">&#128100;</div>
+    <div class="sh-meta"><div class="sh-num">03</div><h2>Narrative &amp; Personas</h2></div>
   </div>
-  <div class="grid-2" style="margin-bottom:14px;">
-    <div class="persona">
-      <span class="persona-tag tag-common">Common use case</span>
-      <div class="pname">Priya, 28</div>
-      <div class="psub">Marketing Executive · Bengaluru · Mobile shopper</div>
-      <p style="font-size:13px;">Priya finds a phone case she likes — ₹349, seems reasonable. She taps "Buy Now," enters her address, and reaches the payment screen. For the first time, she sees a ₹99 shipping fee and ₹42 in taxes appended to her total. That's a <strong>40% price jump</strong> from what she'd mentally committed to paying. She doesn't abandon because she's cheap — she abandons because she feels deceived. She closes the app and buys from a competitor whose product page showed her the full price upfront.</p>
-    </div>
-    <div class="persona">
-      <span class="persona-tag tag-edge">Edge case</span>
-      <div class="pname">Rahul, 34</div>
-      <div class="psub">Schoolteacher · Gorakhpur · First high-value purchase</div>
-      <p style="font-size:13px;">Rahul is buying a water purifier — his first online purchase above ₹5,000. He's already nervous about online payments. He scrolls through the checkout carefully, looking for Cash on Delivery. He doesn't see it mentioned until the final payment screen, and even there it's listed in small text below the UPI and card options. He misses it entirely, assumes COD isn't available, and abandons — not because he couldn't pay, but because <strong>the interface didn't give him the reassurance he needed</strong> at the moment he needed it.</p>
-    </div>
-  </div>
-  <h3>Before / After</h3>
-  <div class="ba">
-    <div class="ba-b">
-      <div class="ba-label">Today</div>
-      <p style="font-size:13px;margin:0;">Checkout is a funnel of escalating anxiety. Each new screen can introduce a new cost, a missing option, or a failed transaction. By the time users reach the payment screen, trust is already fragile — one surprise breaks it entirely.</p>
-    </div>
-    <div class="ba-a">
-      <div class="ba-label">After</div>
-      <p style="font-size:13px;margin:0;">Priya sees the ₹99 shipping fee on the product page before she even adds to cart. Rahul sees a green "Cash on Delivery available in Gorakhpur" badge the moment he opens his cart. The experience surfaces the answer to his unspoken question before he has to ask.</p>
-    </div>
-  </div>
-</section>
 
+  <!-- Persona 1: Priya -->
+  <div class="persona-block" style="border-left-color:var(--indigo);">
+    <div class="persona-block-header">
+      <div class="persona-avatar" style="background:var(--indigo-lt);color:var(--indigo);">P</div>
+      <div class="persona-block-meta">
+        <div class="persona-block-name">Priya, 28 &mdash; Frequent Shopper, Low Tolerance for Price Surprises, High Intent Buyer</div>
+        <div class="persona-block-sub">Marketing Executive &middot; Bengaluru &middot; Shops frequently across categories</div>
+      </div>
+      <span class="persona-tag tag-common" style="position:static;margin-left:auto;flex-shrink:0;">Common use case</span>
+    </div>
+    <div class="persona-journey">
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--indigo);"></div>
+        <div class="pj-content"><div class="pj-label">Discovery</div><div class="pj-text">Priya discovers a phone case priced at &#8377;349 &mdash; it fits her budget. She proceeds to checkout with clear purchase intent.</div></div>
+      </div>
+      <div class="pj-line"></div>
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--amber);"></div>
+        <div class="pj-content"><div class="pj-label">Payment step &mdash; surprise</div><div class="pj-text">An additional &#8377;99 shipping fee and &#8377;42 tax are revealed for the first time &mdash; increasing the total by <strong>~40%</strong>.</div></div>
+      </div>
+      <div class="pj-line"></div>
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--red);"></div>
+        <div class="pj-content"><div class="pj-label">Abandonment</div><div class="pj-text">Priya had already mentally committed to the original price. The late-stage increase creates a perception of hidden costs. She abandons and switches to a competitor with upfront pricing.</div></div>
+      </div>
+    </div>
+    <div class="persona-insight" style="border-color:var(--indigo-mid);background:var(--indigo-lt);">
+      <span class="pi-label" style="color:var(--indigo);">Behavioral insight</span>
+      <span class="pi-text">Users anchor to the first price they see. Any late deviation feels like deception, not adjustment.</span>
+    </div>
+    <div class="persona-verdict" style="border-color:var(--indigo-mid);">
+      <span class="pv-tag" style="background:var(--indigo-lt);color:var(--indigo);">Root cause</span>
+      <span class="pv-text">This is not a pricing issue &mdash; it is a <strong>trust breakdown</strong>.</span>
+    </div>
+  </div>
+
+  <!-- Persona 2: Rahul -->
+  <div class="persona-block" style="border-left-color:var(--amber);margin-top:14px;">
+    <div class="persona-block-header">
+      <div class="persona-avatar" style="background:var(--amber-lt);color:var(--amber);">R</div>
+      <div class="persona-block-meta">
+        <div class="persona-block-name">Rahul, 34 &mdash; Low-Trust, Occasional Buyer Making First High-Value Purchase</div>
+        <div class="persona-block-sub">Schoolteacher &middot; Gorakhpur &middot; Rare shopper &middot; First high-value online purchase</div>
+      </div>
+      <span class="persona-tag tag-edge" style="position:static;margin-left:auto;flex-shrink:0;">Edge case</span>
+    </div>
+    <div class="persona-journey">
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--indigo);"></div>
+        <div class="pj-content"><div class="pj-label">Context</div><div class="pj-text">Rahul is purchasing a water purifier (&gt;&#8377;5,000) &mdash; his first high-value online purchase. He is highly cautious about payment risk and actively looking for COD availability.</div></div>
+      </div>
+      <div class="pj-line"></div>
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--amber);"></div>
+        <div class="pj-content"><div class="pj-label">Interface failure</div><div class="pj-text">COD is not clearly visible until the final payment screen &mdash; and even then, it is buried below other options. Unable to confirm availability, Rahul cannot get the reassurance he needs.</div></div>
+      </div>
+      <div class="pj-line"></div>
+      <div class="pj-step">
+        <div class="pj-dot" style="background:var(--red);"></div>
+        <div class="pj-content"><div class="pj-label">Abandonment</div><div class="pj-text">Rahul assumes COD is not supported and abandons the purchase &mdash; not because he couldn&#x27;t pay, but because the interface failed to reassure him at the right moment.</div></div>
+      </div>
+    </div>
+    <div class="persona-insight" style="border-color:var(--amber-mid);background:var(--amber-lt);">
+      <span class="pi-label" style="color:var(--amber);">Behavioral insight</span>
+      <span class="pi-text">For trust-sensitive users, absence of reassurance is interpreted as absence of the feature itself.</span>
+    </div>
+    <div class="persona-verdict" style="border-color:var(--amber-mid);">
+      <span class="pv-tag" style="background:var(--amber-lt);color:var(--amber);">Root cause</span>
+      <span class="pv-text">This is not a payment failure &mdash; it is a <strong>failure of reassurance at the right moment</strong>.</span>
+    </div>
+  </div>
+
+  <!-- Synthesis -->
+  <h3 style="margin-top:28px;">Synthesis: what&#x27;s actually broken</h3>
+  <div class="synthesis-block">
+    <div class="synth-headline">Checkout is not just a transaction flow &mdash; it is a <em>trust negotiation system</em>.</div>
+    <div class="synth-body">
+      <div class="synth-col">
+        <div class="synth-col-title">Across both personas</div>
+        <div class="synth-item">Users are not dropping due to price or capability constraints</div>
+        <div class="synth-item">They are dropping due to <strong>unexpected information</strong> and <strong>delayed reassurance</strong></div>
+      </div>
+      <div class="synth-divider"></div>
+      <div class="synth-col">
+        <div class="synth-col-title">By the time users reach payment</div>
+        <div class="synth-item">Cognitive load is high</div>
+        <div class="synth-item">Trust is already fragile</div>
+        <div class="synth-item">Any surprise or ambiguity leads to abandonment</div>
+      </div>
+    </div>
+    <div class="synth-core">
+      <span class="synth-core-label">Core problem</span>
+      The system answers critical user questions too late &mdash; after intent has already been formed.
+    </div>
+  </div>
+
+  <!-- Design Principle -->
+  <div class="design-principle">
+    <div class="dp-header">
+      <span class="dp-icon">&#9989;</span>
+      <span class="dp-title">Design principle moving forward</span>
+    </div>
+    <div class="dp-tagline">Surface critical decision-making information <em>before</em> the user has to ask for it.</div>
+    <div class="dp-grid">
+      <div class="dp-item">
+        <div class="dp-item-label">Price transparency</div>
+        <div class="dp-item-when">at product discovery stage</div>
+      </div>
+      <div class="dp-item">
+        <div class="dp-item-label">Payment reassurance (e.g. COD)</div>
+        <div class="dp-item-when">at cart entry</div>
+      </div>
+    </div>
+    <div class="dp-shift">
+      <div class="dp-shift-from">
+        <div class="dp-shift-label">From</div>
+        <div class="dp-shift-text">&ldquo;Conversion funnel with friction&rdquo;</div>
+      </div>
+      <div class="dp-shift-arrow">&#8594;</div>
+      <div class="dp-shift-to">
+        <div class="dp-shift-label">To</div>
+        <div class="dp-shift-text">&ldquo;Guided flow with pre-resolved doubts&rdquo;</div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 <!-- ══════════════ 04 GOALS ══════════════ -->
 <section id="goals">
