@@ -7,11 +7,15 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [
+    "headers": [
       {
-        "source": "/",
-        "destination": "/PRD_cartAbandonment.html",
-        "type": 301
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
       }
     ]
   }
