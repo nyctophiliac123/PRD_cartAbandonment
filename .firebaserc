@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "rfpresponseassistant"
+  },
+  "targets": {
+    "rfpresponseassistant": {
+      "hosting": {
+        "cart_site": [
+          "cartabandonmentprd"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
